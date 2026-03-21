@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
+import NeuroLab from './pages/NeuroLab';
 // 1. ADD THE IMPORT HERE AT THE TOP
 import ProjectDetail from './pages/ProjectDetail';
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             {/* 2. ADD THE ROUTE HERE INSIDE THE ROUTES BLOCK */}
             <Route path="/projects/:id" element={<ProjectDetail />} />
+            <Route path="/lab" element={<NeuroLab />} />
           </Routes>
         </main>
         <Footer />
