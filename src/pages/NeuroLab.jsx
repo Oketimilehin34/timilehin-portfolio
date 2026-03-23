@@ -55,17 +55,17 @@ const NeuroLab = () => {
           
           {/* LEFT PANEL: UPLOAD */}
           <div className="bg-[#0a0a0a] border border-slate-800 rounded-2xl p-8 flex flex-col justify-between transition-all hover:border-slate-700">
-            <div>
-              <div className="mb-8 p-12 border-2 border-dashed border-slate-800 rounded-xl flex flex-col items-center justify-center text-slate-500 hover:border-lab-cyan/50 hover:bg-lab-cyan/5 transition-all group">
+            <div className="relative"> {/* Added relative here */}
+              <label className="mb-8 p-12 border-2 border-dashed border-slate-800 rounded-xl flex flex-col items-center justify-center text-slate-500 hover:border-lab-cyan/50 hover:bg-lab-cyan/5 transition-all group cursor-pointer">
                 <Upload className="mb-4 group-hover:text-lab-cyan transition-colors" size={48} />
                 <p className="text-xs uppercase tracking-widest font-bold">Upload_NIfTI_Scan</p>
                 <input 
                   type="file" 
                   onChange={handleFileChange} 
-                  className="absolute inset-0 opacity-0 cursor-pointer"
+                  className="hidden" // Changed to hidden for better accessibility/styling
                   accept=".nii,.gz"
                 />
-              </div>
+              </label>
 
               {file && (
                 <div className="bg-slate-900/50 p-4 rounded-lg border border-slate-700 flex items-center justify-between mb-6">
